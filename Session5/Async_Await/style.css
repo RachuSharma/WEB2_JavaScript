@@ -1,0 +1,60 @@
+/* Basic reset and global style */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #e9d7ea;
+    padding: 20px;
+  }
+  
+  /* Input and button styling */
+  input[type="text"] {
+    width: 120px;
+    padding: 5px;
+    margin-right: 5px;
+    font-size: 14px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    background-color: #f79f9f;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #eebebe;
+  }
+  
+  /* Status and results styling */
+  p {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  
+  #message {
+    font-weight: bold;
+  }
+  
+  div {
+    margin-top: 15px;
+  }
+  
+  /* Pokémon image styling */
+  img {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /* Emphasize #id, #name, and #type */
+  #id, #name, #type {
+    font-weight: bold;
+  }
+  

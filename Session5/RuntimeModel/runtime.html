@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>A Callback To Childhood</title>
+</head>
+<body>
+    <input type="text" />
+    <button onclick="getPokemon(document.querySelector('input').value)">Submit</button>
+
+    <p>Request status: <span id="message"></span></p>
+    <div>
+        <img width="96" height="96" />
+        <p>Number: <span id="id"></span></p>
+        <p>Name: <span id="name"></span></p>
+        <p>Type: <span id="type"></span></p>
+    </div> 
+    
+    <style>
+        /* Basic reset and global style */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #e9d7ea;
+    padding: 20px;
+  }
+  
+  /* Input and button styling */
+  input[type="text"] {
+    width: 120px;
+    padding: 5px;
+    margin-right: 5px;
+    font-size: 14px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    background-color: #f79f9f;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #eebebe;
+  }
+  
+  /* Status and results styling */
+  p {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  
+  #message {
+    font-weight: bold;
+  }
+  
+  div {
+    margin-top: 15px;
+  }
+  
+  /* Pokémon image styling */
+  img {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /* Emphasize #id, #name, and #type */
+  #id, #name, #type {
+    font-weight: bold;
+  }
+  
+    </style>
+    <script>
+       
+ // Example for experiment 1
+function foo() {
+    setTimeout(function fooTimer() {
+        bar()
+    }, 1000)
+}
+
+function bar() {
+    setTimeout(function barTimer() {
+        baz()
+    }, 1000)
+}
+
+function baz() {
+    setTimeout(function bazTimer() {
+        console.log("THE END!")
+    }, 1000)
+}
+
+foo()
+
+// Example for experiment 2
+function tightChain() {
+    setTimeout(function timer() {
+        tightChain()
+    }, 0)
+}
+
+tightChain()
+
+$.on("button", "click", function onClick() {
+    console.log("You clicked the button!")
+})
+
+// Example for experiment 3
+function chain() {
+    setTimeout(function timer() {
+        chain()
+    }, 6000)
+}
+
+function chain2() {
+    setTimeout(function timer2() {
+        chain2()
+    }, 1000)
+}
+
+chain()
+chain2()
+    </script>
+</body>
+</html>
